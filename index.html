@@ -5,9 +5,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="GPS Check">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
 <title>GPS Check</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+
+<script>
+// Inline manifest for PWA installability
+const manifestData = {
+  name: "GPS Check",
+  short_name: "GPS Check",
+  description: "Controlla la qualità del segnale GPS",
+  start_url: ".",
+  display: "standalone",
+  background_color: "#0a0a0a",
+  theme_color: "#0a0a0a",
+  orientation: "portrait",
+  icons: [
+    { src: "data:image/png;base64,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", sizes: "512x512", type: "image/png", purpose: "any maskable" }
+  ]
+};
+const blob = new Blob([JSON.stringify(manifestData)], {type:'application/manifest+json'});
+const manifestURL = URL.createObjectURL(blob);
+document.addEventListener('DOMContentLoaded', () => {
+  const link = document.createElement('link');
+  link.rel = 'manifest';
+  link.href = manifestURL;
+  document.head.appendChild(link);
+});
+</script>
+
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -56,9 +85,7 @@
     color: var(--text);
   }
 
-  .logo span {
-    color: var(--accent);
-  }
+  .logo span { color: var(--accent); }
 
   .badge-auto {
     font-family: 'DM Mono', monospace;
@@ -118,9 +145,7 @@
   .bulb.off-yellow { background: var(--yellow); }
   .bulb.off-green  { background: var(--green); }
 
-  .status-text {
-    text-align: center;
-  }
+  .status-text { text-align: center; }
 
   .status-label {
     font-size: 26px;
@@ -190,9 +215,7 @@
     padding: 5px 0;
   }
 
-  .coord-row + .coord-row {
-    border-top: 1px solid var(--border);
-  }
+  .coord-row + .coord-row { border-top: 1px solid var(--border); }
 
   .coord-key {
     font-family: 'DM Mono', monospace;
@@ -262,11 +285,29 @@
     color: var(--muted);
     padding: 10px 16px;
     border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
+
+  .log-clear {
+    font-size: 10px;
+    color: var(--muted);
+    cursor: pointer;
+    padding: 2px 6px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: none;
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.5px;
+    transition: color 0.15s;
+  }
+
+  .log-clear:hover { color: var(--text); }
 
   .log-list {
     list-style: none;
-    max-height: 140px;
+    max-height: 160px;
     overflow-y: auto;
   }
 
@@ -298,15 +339,6 @@
   .dot-red    { background: var(--red); }
   .dot-gray   { background: var(--muted); }
 
-  .pulsing {
-    animation: pulse 1.4s ease-in-out infinite;
-  }
-
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.4; }
-  }
-
   .watch-indicator {
     font-family: 'DM Mono', monospace;
     font-size: 11px;
@@ -323,6 +355,22 @@
     background: var(--green);
     animation: pulse 1.2s ease-in-out infinite;
   }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  .pwa-hint {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    text-align: center;
+    padding: 0 8px 8px;
+    line-height: 1.5;
+    display: none;
+  }
+  .pwa-hint.visible { display: block; }
 </style>
 </head>
 <body>
@@ -374,6 +422,10 @@
       <span class="coord-val" id="m-lon">—</span>
     </div>
     <div class="coord-row">
+      <span class="coord-key">DIREZIONE</span>
+      <span class="coord-val" id="m-heading">—</span>
+    </div>
+    <div class="coord-row">
       <span class="coord-key">AGGIORNATO</span>
       <span class="coord-val" id="m-time">—</span>
     </div>
@@ -385,21 +437,33 @@
   </div>
 
   <div class="log-card">
-    <div class="log-header">Log eventi</div>
-    <ul class="log-list" id="log-list">
-      <li class="log-item">
-        <div class="dot dot-gray"></div>
-        <span class="log-time" id="log-init-time">--:--:--</span>
-        <span class="log-msg">App avviata, in attesa</span>
-      </li>
-    </ul>
+    <div class="log-header">
+      <span>Log eventi</span>
+      <button class="log-clear" onclick="clearLog()">pulisci</button>
+    </div>
+    <ul class="log-list" id="log-list"></ul>
+  </div>
+
+  <div class="pwa-hint" id="pwa-hint">
+    Per installare: tocca <strong>Condividi</strong> → <strong>Aggiungi a schermata Home</strong>
   </div>
 </main>
 
 <script>
-  let watchId = null;
+  let watchId       = null;
+  let currentState  = null;          // stato corrente del semaforo
+  let accuracyBuf   = [];            // buffer media mobile (5 letture)
+  const BUF_SIZE    = 5;
 
-  document.getElementById('log-init-time').textContent = now();
+  // Log iniziale
+  addLog('App avviata, in attesa', 'gray');
+
+  // Mostra hint PWA su Safari/iOS se non già installata
+  const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+  const isStandalone = window.navigator.standalone === true;
+  if (isIOS && !isStandalone) {
+    document.getElementById('pwa-hint').classList.add('visible');
+  }
 
   function now() {
     return new Date().toLocaleTimeString('it-IT');
@@ -411,11 +475,20 @@
     li.className = 'log-item';
     li.innerHTML = `<div class="dot dot-${color}"></div><span class="log-time">${now()}</span><span class="log-msg">${msg}</span>`;
     list.appendChild(li);
-    li.scrollIntoView({ behavior: 'smooth' });
+    list.scrollTop = list.scrollHeight;
+  }
+
+  function clearLog() {
+    document.getElementById('log-list').innerHTML = '';
+    addLog('Log pulito', 'gray');
   }
 
   function setLight(state) {
-    const bulbs = { red: document.getElementById('b-red'), yellow: document.getElementById('b-yellow'), green: document.getElementById('b-green') };
+    const bulbs = {
+      red:    document.getElementById('b-red'),
+      yellow: document.getElementById('b-yellow'),
+      green:  document.getElementById('b-green')
+    };
     Object.entries(bulbs).forEach(([k, el]) => {
       el.className = 'bulb ' + (k === state ? 'active-' + k : 'off-' + k);
     });
@@ -435,61 +508,103 @@
   }
 
   function classifyAccuracy(acc) {
-    if (acc <= 15)  return 'green';
-    if (acc <= 50)  return 'yellow';
+    if (acc <= 15) return 'green';
+    if (acc <= 50) return 'yellow';
     return 'red';
   }
 
+  function smoothedAccuracy(raw) {
+    accuracyBuf.push(raw);
+    if (accuracyBuf.length > BUF_SIZE) accuracyBuf.shift();
+    return Math.round(accuracyBuf.reduce((a, b) => a + b, 0) / accuracyBuf.length);
+  }
+
+  function headingText(h) {
+    if (h === null || h === undefined || isNaN(h)) return '—';
+    const dirs = ['N','NE','E','SE','S','SO','O','NO'];
+    return dirs[Math.round(h / 45) % 8] + ' ' + Math.round(h) + '°';
+  }
+
   function updateMetrics(pos) {
-    const c = pos.coords;
-    const acc = Math.round(c.accuracy);
-    const state = classifyAccuracy(acc);
+    const c   = pos.coords;
+    const acc = smoothedAccuracy(c.accuracy);
+    const newState = classifyAccuracy(acc);
 
-    setLight(state);
+    // Aggiorna il semaforo SOLO se lo stato cambia
+    if (newState !== currentState) {
+      setLight(newState);
+      const logMsg = newState === 'green'  ? `Precisione ${acc}m — segnale ottimo`
+                   : newState === 'yellow' ? `Precisione ${acc}m — segnale debole`
+                   :                         `Precisione ${acc}m — segnale scarso`;
+      addLog(logMsg, newState);
+      currentState = newState;
+    }
 
-    document.getElementById('m-accuracy').innerHTML = `${acc}<span class="metric-unit">m</span>`;
-    document.getElementById('m-sats').textContent = estimateSats(acc);
-    document.getElementById('m-speed').innerHTML = c.speed != null ? `${Math.round(c.speed * 3.6)}<span class="metric-unit">km/h</span>` : `—`;
-    document.getElementById('m-altitude').innerHTML = c.altitude != null ? `${Math.round(c.altitude)}<span class="metric-unit">m</span>` : `—`;
-    document.getElementById('m-lat').textContent = c.latitude.toFixed(6);
-    document.getElementById('m-lon').textContent = c.longitude.toFixed(6);
-    document.getElementById('m-time').textContent = now();
-
-    const logMsg = state === 'green'  ? `Precisione ${acc}m — ottimo`
-                 : state === 'yellow' ? `Precisione ${acc}m — segnale debole`
-                 :                      `Precisione ${acc}m — segnale scarso`;
-    addLog(logMsg, state);
+    // Metriche sempre aggiornate
+    document.getElementById('m-accuracy').innerHTML  = `${acc}<span class="metric-unit">m</span>`;
+    document.getElementById('m-sats').textContent    = estimateSats(acc);
+    document.getElementById('m-speed').innerHTML     = c.speed != null
+      ? `${Math.round(c.speed * 3.6)}<span class="metric-unit">km/h</span>`
+      : `—`;
+    document.getElementById('m-altitude').innerHTML  = c.altitude != null
+      ? `${Math.round(c.altitude)}<span class="metric-unit">m</span>`
+      : `—`;
+    document.getElementById('m-lat').textContent     = c.latitude.toFixed(6);
+    document.getElementById('m-lon').textContent     = c.longitude.toFixed(6);
+    document.getElementById('m-heading').textContent = headingText(c.heading);
+    document.getElementById('m-time').textContent    = now();
   }
 
   function onError(err) {
     const msgs = {
-      1: 'Permesso GPS negato dall\'utente',
+      1: 'Permesso GPS negato',
       2: 'Posizione non disponibile',
       3: 'Timeout nella richiesta GPS'
     };
+    const msg = msgs[err.code] || 'Errore sconosciuto';
     setLight('red');
     document.getElementById('status-label').style.color = '#ef4444';
     document.getElementById('status-label').textContent = 'Errore';
-    document.getElementById('status-desc').textContent = msgs[err.code] || 'Errore sconosciuto';
-    addLog(msgs[err.code] || 'Errore GPS', 'red');
+    document.getElementById('status-desc').textContent = msg;
+    addLog(msg, 'red');
+    currentState = 'red';
     resetUI();
   }
 
-  function startCheck() {
+  async function startCheck() {
     if (!('geolocation' in navigator)) {
       document.getElementById('status-desc').textContent = 'GPS non supportato dal browser';
       addLog('Geolocation API non supportata', 'red');
       return;
     }
 
-    const btn = document.getElementById('btn-main');
+    // Controlla se il permesso è già stato negato
+    if (navigator.permissions) {
+      try {
+        const perm = await navigator.permissions.query({ name: 'geolocation' });
+        if (perm.state === 'denied') {
+          document.getElementById('status-desc').textContent = 'Permesso GPS negato. Abilitalo nelle impostazioni.';
+          addLog('Permesso GPS negato (impostazioni)', 'red');
+          setLight('red');
+          currentState = 'red';
+          return;
+        }
+      } catch(e) { /* Safari non supporta permissions.query per geolocation */ }
+    }
+
+    accuracyBuf  = [];
+    currentState = null;
+
+    const btn  = document.getElementById('btn-main');
     const stop = document.getElementById('btn-stop');
-    btn.disabled = true;
+    btn.disabled    = true;
     btn.textContent = 'Localizzazione…';
     stop.style.display = 'block';
-    addLog('Richiesta permesso GPS…', 'gray');
 
-    document.getElementById('watch-status').innerHTML = `<div class="watch-indicator"><div class="watch-dot"></div>live</div>`;
+    document.getElementById('watch-status').innerHTML =
+      `<div class="watch-indicator"><div class="watch-dot"></div>live</div>`;
+
+    addLog('Richiesta permesso GPS…', 'gray');
 
     watchId = navigator.geolocation.watchPosition(
       updateMetrics,
@@ -504,11 +619,12 @@
       watchId = null;
     }
     addLog('Monitoraggio fermato', 'gray');
+    currentState = null;
     resetUI();
   }
 
   function resetUI() {
-    document.getElementById('btn-main').disabled = false;
+    document.getElementById('btn-main').disabled    = false;
     document.getElementById('btn-main').textContent = 'Avvia controllo';
     document.getElementById('btn-stop').style.display = 'none';
     document.getElementById('watch-status').innerHTML = '';
